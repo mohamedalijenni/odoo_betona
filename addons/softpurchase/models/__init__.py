@@ -1,3 +1,3 @@
-import purchase
-
+from odoo.addons import purchase
+import softpurchase
 
