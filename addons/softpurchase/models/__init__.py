@@ -1,2 +1,3 @@
-import purchase
+from addons import purchase
+import softpurchase
 
