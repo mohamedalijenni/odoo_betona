@@ -1,15 +1,11 @@
 <odoo>
-
-
-      softpurchase form 
-      
-          <record id="softpurchase_form" model="ir.ui.view">
+<record id="softpurchase_form" model="ir.ui.view">
             <field name="name">purchase.order.form</field>
             <field name="model">purchase.order</field>
             <field name="arch" type="xml">
                 <form string="Purchase Order">
                 <header>
-                    <button name="button_confirm" type="object" states="purchase" string="Confirm Order" class="oe_highlight" id="bid_confirm"/>
+                    <button name="button_confirm" type="object" states="draft" string="Confirm Order" id="draft_confirm"/>
                     <button name="action_view_picking" string="Receive Products" class="oe_highlight" type="object" attrs="{'invisible': ['|', '|' , ('is_shipped', '=', True), ('monstate','not in', ('purchase','done')), ('picking_count', '=', 0)]}"/>
                     <button name="button_draft" states="cancel" string="Set to Draft" type="object" />
                     <button name="button_cancel" states="prepurchase,purchase" string="Cancel" type="object" />
@@ -154,7 +150,7 @@
         </record>
 
 
-<record id="purchase.purchase_form_action" model="ir.actions.act_window">
+       <record id="purchase.purchase_form_action" model="ir.actions.act_window">
             <field name="name">Purchase Orders</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">purchase.order</field>
@@ -180,11 +176,4 @@
               </p>
             </field>
      </record>
-
-
-      <!-- fin heritage d'action purchase -->
-      
-      <!-- test -->
-
-
-</odoo>
+</odoo>     
