@@ -15,6 +15,17 @@
                     </field>
                 </data>  -->
               
+                   <xpath expr="//page[3]" position="attributes">
+    
+                        <attribute name="invisible">1</attribute>
+    
+                    </xpath> 
+                    
+               
+                 <field name="website" position="after">
+                    <field name="ref" select="1"/> 
+                 </field>
+
         
                  <xpath expr="//field[@name='property_account_position_id']" position="after">    
                  <field name="matricule_fiscale"/>
