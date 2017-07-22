@@ -2,7 +2,7 @@
 <record id="account_vondor_access" model="ir.ui.view">
     <field name="name">mohamed ali</field>
     <field name="model">res.partner</field>
-    <field name="groups" eval="[(4,ref('account.group_account_invoice'))]"/>
+    <field name="groups_id" eval="[(4,ref('account.group_account_invoice'))]"/>
     <field name="inherit_id" ref="base.view_partner_form"/>
     <field name="arch" type="xml">
         <xpath expr="//field[@name='name']"  position="attributes">
