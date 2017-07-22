@@ -1,0 +1,41 @@
+<odoo>
+   <record id="price_action" model="ir.actions.act_window">
+      <field name="name">price_action</field>
+      <field name="res_model">product.template</field>
+      <field name="view_mode">tree</field>
+   </record>
+   
+   <record id="price_action_tree" model="ir.ui.view">
+      <field name="name">price_action</field>
+      <field name="model">product.template</field>
+      <field name="arch" type="xml">
+           <tree editable="buttom">
+              <field name="name" readonly="1"/>
+              <field name="standard_price" readonly="1"/>
+              <field name="list_price"/>
+           </tree>
+      </field>
+   </record>
+   
+   <record id="account_vondor_access" model="ir.ui.view">
+    <field name="name">mohamed ali</field>
+    <field name="model">product.template</field>
+    <field name="groups" eval="[(4,ref('sales_team.group_sale_salesman'))]"/>
+    <field name="inherit_id" ref="product.product_template_only_form_view"/>
+    <field name="arch" type="xml">
+          <xpath expr="//field[@name='purchase_ok']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='standard_price']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+          <xpath expr="//field[@name='name']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+    </field>
+   </record> 
+   
+   <menuitem id="liste_des_prix_de_vente" action="price_action" name="prix de vente" parent="sales_team.menu_sales"/>
+   
+</odoo>
+

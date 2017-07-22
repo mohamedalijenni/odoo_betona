@@ -1,0 +1,72 @@
+<odoo>
+<record id="account_vondor_access" model="ir.ui.view">
+    <field name="name">mohamed ali</field>
+    <field name="model">res.partner</field>
+    <field name="groups" eval="[(4,ref('account.group_account_invoice'))]"/>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='name']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='parent_id']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='street']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='street2']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='city']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='state_id']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='zip']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='country_id']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+            <xpath expr="//field[@name='website']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='category_id']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+            <xpath expr="//field[@name='function']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='phone']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='mobile']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='email']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>
+        <xpath expr="//field[@name='fax']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>  
+        <xpath expr="//field[@name='title']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>    
+        <xpath expr="//field[@name='lang']"  position="attributes">
+          <attribute name="readonly">1</attribute> 
+        </xpath>    
+        <xpath expr="//page[1]"  position="attributes">
+          <attribute name="invisible">1</attribute> 
+        </xpath>
+        <xpath expr="//page[2]"  position="attributes">
+          <attribute name="invisible">1</attribute> 
+        </xpath>
+        <xpath expr="//page[3]"  position="attributes">
+          <attribute name="invisible">1</attribute> 
+        </xpath>    
+
+    </field>
+</record>
+
+</odoo>   
