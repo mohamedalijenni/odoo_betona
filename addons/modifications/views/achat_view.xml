@@ -28,5 +28,23 @@
           </data>
         </field>
     </record>
+
+    <record id="view_partner_invoice_tree_inherit" model="ir.ui.view">
+        <field name="name">account.invoice.form.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+        <field name="groups_id" eval="[(4,ref('purchase.group_purchase_user'))]"/>
+        <field name="arch" type="xml">          
+          <data>
+         <xpath expr="//tree"  position="attributes">
+            <attribute name="edite">false</attribute>
+        </xpath>
+        <xpath expr="//tree"  position="attributes">
+            <attribute name="create">false</attribute>
+        </xpath>
+          </data>
+          
+        </field>
+    </record>
     
 </odoo>
