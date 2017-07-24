@@ -51,6 +51,8 @@
          </field>
     </record>
 
-          
+          <menuitem name="Invoicing"
+            id="sale.menu_sale_invoicing" parent="sales_team.menu_base_partner" groups="account.group_account_invoice"
+            sequence="5"/>
     
 </odoo>
