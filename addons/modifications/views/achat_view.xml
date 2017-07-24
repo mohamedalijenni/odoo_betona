@@ -17,7 +17,7 @@
         <xpath expr="//form"  position="attributes">
             <attribute name="create">false</attribute>
         </xpath>
-        <xpath expr="//headers"  position="attributes">
+        <xpath expr="//header"  position="attributes">
             <attribute name="invisible">1</attribute>
         </xpath>
         </field>
