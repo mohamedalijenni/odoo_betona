@@ -22,13 +22,7 @@ class softpurchase(models.Model):
             self.write({'monstate': 'done'})
         return {}
 
-   @api.model
-    def create(self, vals):
-        if vals.get('name','New')== 'New':
-            vals['state'] = 'prepurchase'
-            vals['name'] = self.env['ir.sequence'].next_by_code('purchase.order') or '/'
-        return super(softpurchase, self).create(vals)
-    
+  
        
     
            
