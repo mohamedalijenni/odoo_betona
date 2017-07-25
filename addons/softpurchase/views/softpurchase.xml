@@ -190,12 +190,13 @@
       
       <xpath expr="//button[@name='post_inventory']" position="attributes">
       <attribut name= "attr">{}
-      </attribut>    
-      <xpath expr="//button[@name='post_inventory']" position="attributes">
-      <attribut name= "groups">
-      </attribut>    
-              
-               </xpath>
+      </attribut>  
+      </xpath>  
+          <xpath expr="//button[@name='post_inventory']" position="attributes">
+          <attribut name= "groups">
+          </attribut>    
+                  
+         </xpath>
       </field>
       </record>
      
