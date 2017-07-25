@@ -189,7 +189,7 @@
       
       
       <xpath expr="//button[@name='post_inventory']" position="attributes">
-      <attribut name= "attr">
+      <attribut name= "attr">{}
       </attribut>    
               
                </xpath>
