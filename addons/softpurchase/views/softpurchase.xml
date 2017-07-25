@@ -177,4 +177,23 @@
               </p>
             </field>
      </record>
+     
+     
+     
+     
+     <record id="view_mrp_production_form_inherit" model="ir.ui.view">
+      <field name="name">purchase.order.form.inherit</field>
+      <field name="model">mrp.production</field>
+      <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+      <field name="arch" type="xml">
+      
+      
+      <xpath expr="//button[@name='post_inventory']" position="attributes">
+      <attribut name= "attr">
+      </attribut>    
+              
+               </xpath>
+      </field>
+      </record>
+     
 </odoo>     
