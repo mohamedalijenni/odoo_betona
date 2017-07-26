@@ -10,19 +10,7 @@
         
                  <xpath expr="//field[@name='property_account_position_id']" position="after">    
                  <field name="matricule_fiscale"/>
-                 </xpath>
-                 
-                 
-             
-                  <data>
-                       <field name="lang" position="after">
-                       <field name="garantie"/>
-                       <!-- <field name="commercial"/> --> 
-                      </field>
-                 </data> 
-                 
-            
-                 
+                 </xpath>         
          </field>
     </record>
   
@@ -33,26 +21,16 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-
-        
-     
-                          <xpath expr="//page[3]" position="attributes">
+                <xpath expr="//page[3]" position="attributes">
     
-                        <attribute name="invisible">1</attribute>
+                   <attribute name="invisible">1</attribute>
     
-                    </xpath> 
+                 </xpath> 
                     
                
                  <field name="website" position="after">
                     <field name="ref" select="1"/> 
-                 </field>
-            
-                 
+                 </field>     
          </field>
-    </record>
-
-          <!-- <menuitem name="Invoicing"
-            id="sale.menu_sale_invoicing" parent="sales_team.menu_base_partner" groups="account.group_account_invoice"
-            sequence="5"/> -->
-    
+    </record>    
 </odoo>
