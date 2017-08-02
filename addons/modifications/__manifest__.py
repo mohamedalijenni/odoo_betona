@@ -17,8 +17,7 @@ Formation technque odoo
     'data': [
         'views/client_view.xml',
         'views/achat_view.xml',
-#         'views/commercial_view.xml'
-#         'views/bon_commande_view.xml'
+        'views/article_view.xml',
         'report/invoice_report_view.xml'
         
        
