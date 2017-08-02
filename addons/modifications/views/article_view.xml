@@ -1,3 +1,10 @@
+Dhouha Slaoui
+Faculté des des sciences de bizerte
+
+Photos récentes
+Afficher la photo contenue dans le messageAfficher la photo contenue dans le messageAfficher la photo contenue dans le message
+Afficher les détails
+
 <?xml version="1.0"?>
 <odoo>
          <record id="view_product_template_form_inherit" model="ir.ui.view">
@@ -15,33 +22,39 @@
                 <xpath expr="//page[6]" position="attributes">
         
                             <attribute name="invisible">1</attribute>
-        
                 </xpath>     
              </field>
          </record>
          
-<record id="view_stock_picking_form_inherit" model="ir.ui.view">
-            <field name="name">stock.picking.form.inherit</field>
-            <field name="model">stock.picking</field>
-            <field name="inherit_id" ref="stock.view_picking_form"/>
-            <field name="arch" type="xml">
-            
-                  <data>
-                       <field name="priority" position="after">
-                       <field name="camion"/>
-                       <field name="chauffeur"/> 
-                      </field>
-                 </data>  
-            
-                   <!-- <field name="chauffeur_id" widget="one2many_list" >
-                      <tree>
-                          <field name="Camion_chauffeur"/>
-                     </tree>
-                  </field> -->
-            </field>
-</record>
-  
-
-
-    
+        <record id="view_stock_picking_form_inherit" model="ir.ui.view">
+                    <field name="name">stock.picking.form.inherit</field>
+                    <field name="model">stock.picking</field>
+                    <field name="inherit_id" ref="stock.view_picking_form"/>
+                    <field name="arch" type="xml">
+                    
+                          <data>
+                               <field name="priority" position="after">
+                               <field name="camion"/>
+                               <field name="chauffeur"/> 
+                              </field>
+                         </data> 
+                          
+                        <data>
+                               <field name="origin" position="after">
+                               <field name="adresse"/>
+                               <field name="reference"/> 
+                              </field>
+                         </data>
+                         
+                          <data>
+                               <field name="origin" position="after">
+                               <field name="ouvrage" widget="radio"/> 
+                               <field name="pompe" widget="radio"/>
+                               </field>  
+                          </data>  
+                    
+                        
+                    </field>
+        </record> 
+     
 </odoo>
